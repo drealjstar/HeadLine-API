@@ -23,10 +23,9 @@ app.get('/news/:country',  (req, res) => {
         }
         // Otherwise do something with the API data and send a response
         else {
-            res.send({
-                data  : JSON.parse(data)          })
+            res.send(JSON.parse(data))
         }
-    });
+        });
 });
 
 app.listen(port, () => console.log(`application running on port ${port}`))
